@@ -10,7 +10,11 @@
   {{- if .Values.secrets.token.fromSecret }}
   valueFrom:
     secretKeyRef:
+      {{- if eq .Values.secrets.token.secretName "" }}
+      name: {{ .Release.Name }}-datasets-server-app-token
+      {{- else }}
       name: {{ .Values.secrets.token.secretName | quote }}
+      {{- end }}
       key: HF_TOKEN
       optional: false
   {{- else }}

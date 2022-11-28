@@ -9,8 +9,8 @@ secrets:
     value: mongo://
   token:
     fromSecret: false
-    secretName: "datasets-server-hf-token"
-    value: hf_app
+    secretName: ""
+    value: "hf_app"
 
 uid: 1000
 gid: 3000
@@ -35,6 +35,7 @@ imagePullSecrets: []
 
 # overridden by docker-images.yaml (which must be in JSON format!)
 dockerImage:
+  pullPolicy: IfNotPresent
   reverseProxy: ""
   jobs:
     mongodb_migration: ""
@@ -115,15 +116,8 @@ reverseProxy:
   tolerations: []
 
 ingress:
-  tls:
-    enabled: false
-    secretName: ""
-  annotations:
-    alb.ingress.kubernetes.io/healthcheck-path: "/healthcheck"
-    alb.ingress.kubernetes.io/listen-ports: '[{"HTTP": 80, "HTTPS": 443}]'
-    alb.ingress.kubernetes.io/scheme: "internet-facing"
-    alb.ingress.kubernetes.io/group.name: "datasets-server"
-    kubernetes.io/ingress.class: "alb"
+  tls: []
+  annotations: {}
 
 # --- services ---
 

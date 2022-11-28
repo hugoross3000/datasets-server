@@ -4,7 +4,7 @@
 {{- define "containerWorkerSplits" -}}
 - name: "{{ include "name" . }}-worker-splits"
   image: {{ .Values.dockerImage.workers.splits }}
-  imagePullPolicy: IfNotPresent
+  imagePullPolicy: {{ .Values.dockerImage.pullPolicy }}
   env:
   {{ include "envCache" . | nindent 2 }}
   {{ include "envQueue" . | nindent 2 }}

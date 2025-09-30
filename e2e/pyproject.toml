@@ -11,7 +11,7 @@ python = "3.9.15"
 
 [tool.poetry.group.dev.dependencies]
 bandit = "^1.7.0"
-black = "^22.1.0"
+black = "^24.3.0"
 flake8 = "^3.9.2"
 huggingface-hub = "^0.11.0"
 isort = "^5.9.3"
@@ -19,7 +19,7 @@ mypy = "0.812"
 pip-audit = "^2.4.6"
 poetryup = "^0.3.8"
 pytest = "^7.2.0"
-requests = "^2.27.1"
+requests = "^2.32.4"
 
 [build-system]
 build-backend = "poetry.core.masonry.api"

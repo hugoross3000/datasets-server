@@ -11,14 +11,14 @@ environs = "^9.5.0"
 huggingface-hub = "^0.11.0"
 mongo-types = "0.15.1"
 mongoengine = "^0.24.1"
-orjson = "^3.6.4"
+orjson = "^3.9.15"
 psutil = "^5.9.2"
-pymongo = { extras = ["srv"], version = "^3.13.0" }
+pymongo = { extras = ["srv"], version = "^4.6.3" }
 python = "3.9.15"
 
 [tool.poetry.group.dev.dependencies]
 bandit = "^1.7.0"
-black = "^22.1.0"
+black = "^24.3.0"
 flake8 = "^3.9.2"
 isort = "^5.9.3"
 mypy = "0.812"
